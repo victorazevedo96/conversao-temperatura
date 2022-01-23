@@ -57,3 +57,4 @@ jobs:
           manifests: ./k8s/deployment_cloud.yaml
           # Fully qualified resource URL of the image(s) to be used for substitutions on the manifest files Example: contosodemo.azurecr.io/helloworld:test
           images: vazevedo96/conversao-temperatura:${{ github.run_number }}
+          namespace: conversao-temp
