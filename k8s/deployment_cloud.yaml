@@ -3,18 +3,18 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: web
+  name: web-conv
 spec:
   selector:
     matchLabels:
-      app: web
+      app: web-conv
   template:
     metadata:
       labels:
-        app: web
+        app: web-conv
     spec:
       containers:
-      - name: web
+      - name: web-conv
         image: vazevedo96/conversao-temperatura:v1
         ports:
           - containerPort: 8080
@@ -24,10 +24,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: web
+  name: web-conv
 spec:
   selector:
-    app: web
+    app: web-conv
   ports:
   - port: 8080
     nodePort: 30000
